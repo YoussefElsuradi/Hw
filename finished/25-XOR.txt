@@ -1,0 +1,6 @@
+#Name: Youssef Elsuradi
+#Email: Youssef.elsuradi59@myhunter.cuny.edu
+
+
+
+out =  (in1 and not in2) or (not in1 and in2)

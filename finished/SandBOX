@@ -1,0 +1,22 @@
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+stripe_width = 15
+gap = 20
+offset = 2
+image_size = 250
+
+canvas = np.zeros((image_size, image_size))
+current_col = 0
+while current_col < image_size:
+    if current_col + stripe_width + gap <= image_size-1:
+        canvas[:, current_col:current_col+stripe_width] = 1
+        current_col += stripe_width + gap
+    elif current_col + stripe_width <= image_size-1:
+        canvas[:, current_col:current_col+stripe_width] = 1
+        current_col = image_size
+    else:
+        canvas[:, current_col:] = 1
+        current_col = image_size
+
+plt.imshow(canvas)
